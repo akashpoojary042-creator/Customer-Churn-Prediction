@@ -1,13 +1,31 @@
-## 🚀 Live Demo
-
-[Open Customer Churn Prediction App](https://customer-churn-prediction-nwsewnvcutao5taq8kv8th.streamlit.app/)
-
 ````markdown
 # 📊 Customer Churn Prediction
 
 A Machine Learning project that predicts whether a customer is likely to churn using an XGBoost classification model.
 
 The project also uses SHAP (SHapley Additive exPlanations) to explain why the model made a particular prediction and provides an interactive Streamlit web application.
+
+---
+
+## 🚀 Live Demo
+
+[Open Customer Churn Prediction App](https://customer-churn-prediction-nwsewnvcutao5taq8kv8th.streamlit.app/)
+
+---
+
+## 📸 Application Screenshots
+
+### 👤 Customer Input
+
+![Customer Input](Screenshots/customer-input.png)
+
+### 📈 Prediction Result
+
+![Prediction Result](Screenshots/prediction-result.png)
+
+### 🔎 SHAP Explainability
+
+![SHAP Explanation](Screenshots/shap-explanation.png)
 
 ---
 

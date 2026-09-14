@@ -1,15 +1,14 @@
-````markdown
 # 📊 Customer Churn Prediction
 
-A Machine Learning project that predicts whether a customer is likely to churn using an XGBoost classification model.
+A Machine Learning project that predicts whether a customer is likely to churn using an **XGBoost classification model**.
 
-The project also uses SHAP (SHapley Additive exPlanations) to explain why the model made a particular prediction and provides an interactive Streamlit web application.
+The project also uses **SHAP (SHapley Additive exPlanations)** to explain why the model made a particular prediction and provides an interactive **Streamlit web application**.
 
 ---
 
 ## 🚀 Live Demo
 
-[Open Customer Churn Prediction App](https://customer-churn-prediction-nwsewnvcutao5taq8kv8th.streamlit.app/)
+👉 **[Open Customer Churn Prediction App](https://customer-churn-prediction-nwsewnvcutao5taq8kv8th.streamlit.app/)**
 
 ---
 
@@ -75,7 +74,7 @@ Risk Classification
 SHAP Explainability
        ↓
 Streamlit Application
-````
+```
 
 ---
 
@@ -85,25 +84,27 @@ The dataset contains customer-level information related to demographics, usage b
 
 ### Dataset Features
 
-| Feature           | Description                                             |
-| ----------------- | ------------------------------------------------------- |
-| Age               | Customer age                                            |
-| Gender            | Customer gender                                         |
-| Tenure            | Duration of customer relationship                       |
-| Usage Frequency   | Frequency of service usage                              |
-| Support Calls     | Number of support calls                                 |
-| Payment Delay     | Payment delay information                               |
-| Subscription Type | Customer subscription category                          |
-| Contract Length   | Contract duration                                       |
-| Total Spend       | Total customer spending                                 |
-| Last Interaction  | Time since the customer's last interaction              |
-| Churn             | Target variable indicating whether the customer churned |
+| Feature | Description |
+|---|---|
+| Age | Customer age |
+| Gender | Customer gender |
+| Tenure | Duration of customer relationship |
+| Usage Frequency | Frequency of service usage |
+| Support Calls | Number of support calls |
+| Payment Delay | Payment delay information |
+| Subscription Type | Customer subscription category |
+| Contract Length | Contract duration |
+| Total Spend | Total customer spending |
+| Last Interaction | Time since the customer's last interaction |
+| Churn | Target variable indicating whether the customer churned |
+
+The dataset is available in the **Dataset** folder.
 
 ---
 
 ## 🔧 Feature Engineering
 
-Additional features are created to capture customer behavior and engagement.
+Additional features were created to capture customer behavior and engagement.
 
 ### Average Spend per Tenure
 
@@ -149,21 +150,21 @@ Exploratory Data Analysis was performed to understand customer behavior and iden
 
 The analysis includes:
 
-* Customer demographic analysis
-* Churn distribution
-* Usage behavior
-* Support call patterns
-* Payment behavior
-* Subscription analysis
-* Spending analysis
-* Customer tenure analysis
-* Relationships between features and churn
+- Customer demographic analysis
+- Churn distribution
+- Usage behavior
+- Support call patterns
+- Payment behavior
+- Subscription analysis
+- Spending analysis
+- Customer tenure analysis
+- Relationships between features and churn
 
 ---
 
 ## 📐 Statistical Analysis — ANOVA
 
-ANOVA (Analysis of Variance) was used to determine whether there are statistically significant differences between the means of different customer groups.
+**ANOVA (Analysis of Variance)** was used to determine whether there are statistically significant differences between the means of different customer groups.
 
 ### Hypotheses
 
@@ -175,7 +176,7 @@ There is no significant difference between the group means.
 
 At least one group mean is significantly different.
 
-The ANOVA test was used as part of the statistical analysis to understand relationships between customer characteristics and churn-related behavior.
+ANOVA was included as part of the statistical analysis to understand relationships between customer characteristics and churn-related behavior.
 
 ---
 
@@ -183,7 +184,7 @@ The ANOVA test was used as part of the statistical analysis to understand relati
 
 ### XGBoost Classifier
 
-XGBoost was selected as the primary machine learning algorithm.
+**XGBoost** was selected as the primary machine learning algorithm.
 
 XGBoost is a gradient boosting algorithm that builds multiple decision trees sequentially and combines them to produce a strong predictive model.
 
@@ -217,7 +218,7 @@ Probability Estimation
 
 ## 📈 Model Prediction
 
-The model provides two main outputs:
+The application provides two main outputs.
 
 ### Churn Prediction
 
@@ -230,7 +231,7 @@ The model provides two main outputs:
 
 The model also calculates the probability that a customer will churn.
 
-For example:
+Example:
 
 ```text
 Churn Probability: 0.0028%
@@ -245,17 +246,17 @@ The actual probability depends on the customer's input values and the trained mo
 
 The application categorizes customers based on predicted churn probability.
 
-| Churn Probability | Risk Level     |
-| ----------------- | -------------- |
-| Below 40%         | 🟢 Low Risk    |
-| 40% – 69%         | 🟠 Medium Risk |
-| 70% or above      | 🔴 High Risk   |
+| Churn Probability | Risk Level |
+|---|---|
+| Below 40% | 🟢 Low Risk |
+| 40% – 69% | 🟠 Medium Risk |
+| 70% or above | 🔴 High Risk |
 
 ---
 
 ## 🔎 Explainable AI — SHAP
 
-SHAP (SHapley Additive exPlanations) is used to explain individual model predictions.
+**SHAP (SHapley Additive exPlanations)** is used to explain individual model predictions.
 
 Instead of only showing:
 
@@ -267,18 +268,18 @@ the application also explains which features influenced the prediction.
 
 Example features include:
 
-* Payment Delay
-* Support Calls
-* Tenure
-* Total Spend
-* Usage Frequency
-* Age
-* Gender
-* Contract Length
+- Payment Delay
+- Support Calls
+- Tenure
+- Total Spend
+- Usage Frequency
+- Age
+- Gender
+- Contract Length
 
 The SHAP explanation helps answer:
 
-> Why did the model make this prediction?
+> **Why did the model make this prediction?**
 
 This improves model transparency and makes the machine learning solution easier to explain to business users.
 
@@ -292,38 +293,38 @@ The trained machine learning model is integrated into an interactive Streamlit a
 
 Users can enter:
 
-* Age
-* Gender
-* Tenure
+- Age
+- Gender
+- Tenure
 
 ### 📱 Usage Information
 
 Users can enter:
 
-* Usage Frequency
-* Support Calls
-* Payment Delay
+- Usage Frequency
+- Support Calls
+- Payment Delay
 
 ### 💳 Subscription Information
 
 Users can enter:
 
-* Subscription Type
-* Contract Length
-* Total Spend
-* Last Interaction
+- Subscription Type
+- Contract Length
+- Total Spend
+- Last Interaction
 
 ### 📊 Application Output
 
 The application displays:
 
-* Churn prediction
-* Churn probability
-* Customer risk level
-* Recommended action
-* Customer summary
-* Derived customer metrics
-* SHAP feature explanation
+- Churn prediction
+- Churn probability
+- Customer risk level
+- Recommended action
+- Customer summary
+- Derived customer metrics
+- SHAP feature explanation
 
 ---
 
@@ -331,12 +332,12 @@ The application displays:
 
 The application calculates additional metrics for each customer.
 
-| Metric             | Description                            |
-| ------------------ | -------------------------------------- |
-| Avg Spend / Tenure | Spending relative to customer tenure   |
-| Support Call Rate  | Support calls relative to tenure       |
-| Payment Delay Rate | Payment delay relative to tenure       |
-| Engagement Score   | Additional customer activity indicator |
+| Metric | Description |
+|---|---|
+| Avg Spend / Tenure | Spending relative to customer tenure |
+| Support Call Rate | Support calls relative to tenure |
+| Payment Delay Rate | Payment delay relative to tenure |
+| Engagement Score | Additional customer activity indicator |
 
 Example:
 
@@ -367,17 +368,17 @@ Consider retention offers, personalized discounts, priority support, and direct 
 
 ## 🛠️ Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* XGBoost
-* SHAP
-* Matplotlib
-* Seaborn
-* Streamlit
-* Joblib
-* Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- SHAP
+- Matplotlib
+- Seaborn
+- Streamlit
+- Joblib
+- Jupyter Notebook
 
 ---
 
@@ -386,18 +387,20 @@ Consider retention offers, personalized discounts, priority support, and direct 
 ```text
 Customer-Churn-Prediction/
 │
+├── Dataset/
+│   └── customer_churn_dataset.csv
+│
+├── Screenshots/
+│   ├── customer-input.png
+│   ├── prediction-result.png
+│   └── shap-explanation.png
+│
 ├── app.py
-├── customer_churn_analysis.ipynb
+├── feature_names.pkl
 ├── preprocessor.pkl
 ├── xgboost_model.json
 ├── requirements.txt
-├── README.md
-│
-├── dataset/
-│   └── customer_churn.csv
-│
-└── screenshots/
-    └── app.png
+└── README.md
 ```
 
 ---
@@ -407,7 +410,7 @@ Customer-Churn-Prediction/
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/akashpoojary042-creator/Customer-Churn-Prediction.git
 ```
 
 ### Step 2 — Open the Project Folder
@@ -436,14 +439,14 @@ The application will open in your web browser.
 
 Example customer input:
 
-| Feature         | Value |
-| --------------- | ----: |
-| Age             |    30 |
-| Tenure          |    12 |
-| Usage Frequency |    15 |
-| Support Calls   |     5 |
-| Payment Delay   |    10 |
-| Total Spend     |  ₹500 |
+| Feature | Value |
+|---|---:|
+| Age | 30 |
+| Tenure | 12 |
+| Usage Frequency | 15 |
+| Support Calls | 5 |
+| Payment Delay | 10 |
+| Total Spend | ₹500 |
 
 Example result:
 
@@ -487,12 +490,12 @@ The SHAP visualization helps understand whether each feature pushed the predicti
 
 This project can help businesses:
 
-* Identify customers who may churn
-* Prioritize high-risk customers
-* Understand customer behavior
-* Design targeted retention strategies
-* Improve customer engagement
-* Support data-driven business decisions
+- Identify customers who may churn
+- Prioritize high-risk customers
+- Understand customer behavior
+- Design targeted retention strategies
+- Improve customer engagement
+- Support data-driven business decisions
 
 ---
 
@@ -500,15 +503,15 @@ This project can help businesses:
 
 Possible future improvements include:
 
-* Customer segmentation
-* Model performance monitoring
-* Automated model retraining
-* Larger real-world datasets
-* Comparison with additional machine learning algorithms
-* Cloud deployment
-* Automated retention recommendations
-* Customer lifetime value analysis
-* Real-time churn prediction
+- Customer segmentation
+- Model performance monitoring
+- Automated model retraining
+- Larger real-world datasets
+- Comparison with additional machine learning algorithms
+- Cloud deployment
+- Automated retention recommendations
+- Customer lifetime value analysis
+- Real-time churn prediction
 
 ---
 
@@ -516,21 +519,21 @@ Possible future improvements include:
 
 This project demonstrates practical knowledge of:
 
-* Python for Data Science
-* Data Cleaning
-* Exploratory Data Analysis
-* Statistical Analysis
-* ANOVA
-* Feature Engineering
-* Data Preprocessing
-* Machine Learning
-* XGBoost
-* Model Evaluation
-* Explainable AI
-* SHAP
-* Streamlit
-* Model Deployment
-* Business Analysis
+- Python for Data Science
+- Data Cleaning
+- Exploratory Data Analysis
+- Statistical Analysis
+- ANOVA
+- Feature Engineering
+- Data Preprocessing
+- Machine Learning
+- XGBoost
+- Model Evaluation
+- Explainable AI
+- SHAP
+- Streamlit
+- Model Deployment
+- Business Analysis
 
 ---
 

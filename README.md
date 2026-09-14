@@ -1,5 +1,6 @@
-Yes 👍 **I’ll give you the complete README as ONE copy-paste block.**
-Just click the **copy button** on the code block and paste it into `README.md`.
+## 🚀 Live Demo
+
+[Open Customer Churn Prediction App](https://customer-churn-prediction-nwsewnvcutao5taq8kv8th.streamlit.app/)
 
 ````markdown
 # 📊 Customer Churn Prediction
